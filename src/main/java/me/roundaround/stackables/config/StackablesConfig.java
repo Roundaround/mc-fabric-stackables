@@ -94,7 +94,7 @@ public class StackablesConfig extends ModConfig {
     SOUPS = registerConfigOption(
         BooleanConfigOption
             .yesNoBuilder("soups", "stackables.soups.label")
-            .setComment("Whether to allow regular & lingering potions to stack.")
+            .setComment("Whether to allow soups to stack.")
             .build());
 
     SOUP_COUNT = registerConfigOption(
@@ -130,7 +130,7 @@ public class StackablesConfig extends ModConfig {
     BUCKET_COUNT = registerConfigOption(
         IntConfigOption
             .builder("bucketCount", "stackables.bucket_count.label")
-            .setComment("Maximum stack size for buckets.")
+            .setComment("Maximum stack size for full buckets.")
             .setMinValue(1)
             .setMaxValue(64)
             .setDefaultValue(16)
