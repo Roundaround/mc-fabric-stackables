@@ -3,7 +3,7 @@
   "id": "stackables",
   "version": "${version}",
   "name": "Stackables",
-  "description": "Make some non-stackable items stackable.",
+  "description": "Make some non-stackable items stackable.\n${library}",
   "authors": [
     "Roundaround"
   ],
