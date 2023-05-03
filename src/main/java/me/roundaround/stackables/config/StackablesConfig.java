@@ -48,19 +48,19 @@ public class StackablesConfig extends ModConfig {
 
     MOD_ENABLED = registerConfigOption(
         BooleanConfigOption
-            .builder("modEnabled", "stackables.mod_enabled.label")
+            .builder(this, "modEnabled", "stackables.mod_enabled.label")
             .setComment("Simple toggle for the mod! Set to false to disable.")
             .build());
 
     POTIONS = registerConfigOption(
         BooleanConfigOption
-            .yesNoBuilder("potions", "stackables.potions.label")
+            .yesNoBuilder(this, "potions", "stackables.potions.label")
             .setComment("Whether to allow regular & lingering potions to stack.")
             .build());
 
     POTION_COUNT = registerConfigOption(
         IntConfigOption
-            .builder("potionCount", "stackables.potion_count.label")
+            .builder(this, "potionCount", "stackables.potion_count.label")
             .setComment("Maximum stack size for regular & lingering potions.")
             .setMinValue(1)
             .setMaxValue(64)
@@ -69,13 +69,13 @@ public class StackablesConfig extends ModConfig {
 
     SPLASH_POTIONS = registerConfigOption(
         BooleanConfigOption
-            .yesNoBuilder("splashPotions", "stackables.splash_potions.label")
+            .yesNoBuilder(this, "splashPotions", "stackables.splash_potions.label")
             .setComment("Whether to allow splash potions to stack.")
             .build());
 
     SPLASH_POTION_COUNT = registerConfigOption(
         IntConfigOption
-            .builder("splashPotionCount", "stackables.splash_potion_count.label")
+            .builder(this, "splashPotionCount", "stackables.splash_potion_count.label")
             .setComment("Maximum stack size for splash potions.")
             .setMinValue(1)
             .setMaxValue(64)
@@ -84,7 +84,7 @@ public class StackablesConfig extends ModConfig {
 
     SPLASH_POTION_DELAY = registerConfigOption(
         IntConfigOption
-            .builder("splashPotionDelay", "stackables.splash_potion_delay.label")
+            .builder(this, "splashPotionDelay", "stackables.splash_potion_delay.label")
             .setComment("The delay/cooldown to add to throwing splash potions,", "in game ticks.")
             .setMinValue(0)
             .setMaxValue(20)
@@ -93,13 +93,13 @@ public class StackablesConfig extends ModConfig {
 
     SOUPS = registerConfigOption(
         BooleanConfigOption
-            .yesNoBuilder("soups", "stackables.soups.label")
+            .yesNoBuilder(this, "soups", "stackables.soups.label")
             .setComment("Whether to allow soups to stack.")
             .build());
 
     SOUP_COUNT = registerConfigOption(
         IntConfigOption
-            .builder("soupCount", "stackables.soup_count.label")
+            .builder(this, "soupCount", "stackables.soup_count.label")
             .setComment("Maximum stack size for soups.")
             .setMinValue(1)
             .setMaxValue(64)
@@ -108,13 +108,13 @@ public class StackablesConfig extends ModConfig {
 
     ENCHANTED_BOOKS = registerConfigOption(
         BooleanConfigOption
-            .yesNoBuilder("enchantedBooks", "stackables.enchanted_books.label")
+            .yesNoBuilder(this, "enchantedBooks", "stackables.enchanted_books.label")
             .setComment("Whether to allow enchanted books to stack.")
             .build());
 
     ENCHANTED_BOOK_COUNT = registerConfigOption(
         IntConfigOption
-            .builder("enchantedBookCount", "stackables.enchanted_book_count.label")
+            .builder(this, "enchantedBookCount", "stackables.enchanted_book_count.label")
             .setComment("Maximum stack size for enchanted books.")
             .setMinValue(1)
             .setMaxValue(64)
@@ -123,13 +123,13 @@ public class StackablesConfig extends ModConfig {
 
     BUCKETS = registerConfigOption(
         BooleanConfigOption
-            .yesNoBuilder("buckets", "stackables.buckets.label")
+            .yesNoBuilder(this, "buckets", "stackables.buckets.label")
             .setComment("Whether to allow full buckets to stack.")
             .build());
 
     BUCKET_COUNT = registerConfigOption(
         IntConfigOption
-            .builder("bucketCount", "stackables.bucket_count.label")
+            .builder(this, "bucketCount", "stackables.bucket_count.label")
             .setComment("Maximum stack size for full buckets.")
             .setMinValue(1)
             .setMaxValue(64)
@@ -138,13 +138,13 @@ public class StackablesConfig extends ModConfig {
 
     BOATS = registerConfigOption(
         BooleanConfigOption
-            .yesNoBuilder("boats", "stackables.boats.label")
+            .yesNoBuilder(this, "boats", "stackables.boats.label")
             .setComment("Whether to allow boats to stack.")
             .build());
 
     BOAT_COUNT = registerConfigOption(
         IntConfigOption
-            .builder("boatCount", "stackables.boat_count.label")
+            .builder(this, "boatCount", "stackables.boat_count.label")
             .setComment("Maximum stack size for boats.")
             .setMinValue(1)
             .setMaxValue(64)
@@ -153,13 +153,13 @@ public class StackablesConfig extends ModConfig {
 
     MINECARTS = registerConfigOption(
         BooleanConfigOption
-            .yesNoBuilder("minecarts", "stackables.minecarts.label")
+            .yesNoBuilder(this, "minecarts", "stackables.minecarts.label")
             .setComment("Whether to allow minecarts to stack.")
             .build());
 
     MINECART_COUNT = registerConfigOption(
         IntConfigOption
-            .builder("minecartCount", "stackables.minecart_count.label")
+            .builder(this, "minecartCount", "stackables.minecart_count.label")
             .setComment("Maximum stack size for minecarts.")
             .setMinValue(1)
             .setMaxValue(64)
@@ -168,13 +168,13 @@ public class StackablesConfig extends ModConfig {
 
     BEDS = registerConfigOption(
         BooleanConfigOption
-            .yesNoBuilder("beds", "stackables.beds.label")
+            .yesNoBuilder(this, "beds", "stackables.beds.label")
             .setComment("Whether to allow beds to stack.")
             .build());
 
     BED_COUNT = registerConfigOption(
         IntConfigOption
-            .builder("bedCount", "stackables.bed_count.label")
+            .builder(this, "bedCount", "stackables.bed_count.label")
             .setComment("Maximum stack size for beds.")
             .setMinValue(1)
             .setMaxValue(64)
@@ -183,13 +183,13 @@ public class StackablesConfig extends ModConfig {
 
     DISCS = registerConfigOption(
         BooleanConfigOption
-            .yesNoBuilder("discs", "stackables.discs.label")
+            .yesNoBuilder(this, "discs", "stackables.discs.label")
             .setComment("Whether to allow music discs to stack.")
             .build());
 
     DISC_COUNT = registerConfigOption(
         IntConfigOption
-            .builder("discCount", "stackables.disc_count.label")
+            .builder(this, "discCount", "stackables.disc_count.label")
             .setComment("Maximum stack size for music discs.")
             .setMinValue(1)
             .setMaxValue(64)
@@ -198,13 +198,13 @@ public class StackablesConfig extends ModConfig {
 
     HORNS = registerConfigOption(
         BooleanConfigOption
-            .yesNoBuilder("horns", "stackables.horns.label")
+            .yesNoBuilder(this, "horns", "stackables.horns.label")
             .setComment("Whether to allow goat horns to stack.")
             .build());
 
     HORN_COUNT = registerConfigOption(
         IntConfigOption
-            .builder("hornCount", "stackables.horn_count.label")
+            .builder(this, "hornCount", "stackables.horn_count.label")
             .setComment("Maximum stack size for goat horns.")
             .setMinValue(1)
             .setMaxValue(64)
@@ -213,13 +213,13 @@ public class StackablesConfig extends ModConfig {
 
     PATTERNS = registerConfigOption(
         BooleanConfigOption
-            .yesNoBuilder("patterns", "stackables.patterns.label")
+            .yesNoBuilder(this, "patterns", "stackables.patterns.label")
             .setComment("Whether to allow banner patterns to stack.")
             .build());
 
     PATTERN_COUNT = registerConfigOption(
         IntConfigOption
-            .builder("patternCount", "stackables.pattern_count.label")
+            .builder(this, "patternCount", "stackables.pattern_count.label")
             .setComment("Maximum stack size for banner patterns.")
             .setMinValue(1)
             .setMaxValue(64)
@@ -228,13 +228,13 @@ public class StackablesConfig extends ModConfig {
 
     SADDLES = registerConfigOption(
         BooleanConfigOption
-            .yesNoBuilder("saddles", "stackables.saddles.label")
+            .yesNoBuilder(this, "saddles", "stackables.saddles.label")
             .setComment("Whether to allow saddles to stack.")
             .build());
 
     SADDLE_COUNT = registerConfigOption(
         IntConfigOption
-            .builder("saddleCount", "stackables.saddle_count.label")
+            .builder(this, "saddleCount", "stackables.saddle_count.label")
             .setComment("Maximum stack size for saddles.")
             .setMinValue(1)
             .setMaxValue(64)
@@ -243,13 +243,13 @@ public class StackablesConfig extends ModConfig {
 
     CAKES = registerConfigOption(
         BooleanConfigOption
-            .yesNoBuilder("cakes", "stackables.cakes.label")
+            .yesNoBuilder(this, "cakes", "stackables.cakes.label")
             .setComment("Whether to allow cakes to stack.")
             .build());
 
     CAKE_COUNT = registerConfigOption(
         IntConfigOption
-            .builder("cakeCount", "stackables.cake_count.label")
+            .builder(this, "cakeCount", "stackables.cake_count.label")
             .setComment("Maximum stack size for cakes.")
             .setMinValue(1)
             .setMaxValue(64)

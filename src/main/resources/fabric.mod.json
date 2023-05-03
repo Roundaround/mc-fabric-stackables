@@ -26,11 +26,10 @@
   "mixins": [
     "stackables.mixins.json"
   ],
-  "accessWidener" : "stackables.accesswidener",
+  "accessWidener": "stackables.accesswidener",
   "depends": {
     "fabricloader": ">=0.13.3",
-    "minecraft": "1.19.x",
-    "java": ">=17",
-    "roundalib": "~0.2.0"
+    "minecraft": "1.19.4",
+    "java": ">=17"
   }
 }

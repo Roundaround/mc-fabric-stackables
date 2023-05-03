@@ -5,9 +5,9 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "BucketItemMixin",
-    "HorseScreenHandler$1Mixin",
+    "HorseScreenHandlerSlotMixin",
     "ItemAccessor",
-    "JukeboxBlockMixin",
+    "JukeboxBlockEntityMixin",
     "MilkBucketItemMixin",
     "PowderSnowBucketItemMixin",
     "StewItemMixin",
