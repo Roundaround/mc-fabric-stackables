@@ -19,98 +19,98 @@ public final class StackablesMod implements ModInitializer {
 
     initAllStacking();
 
-    CONFIG.MOD_ENABLED.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.MOD_ENABLED.subscribeToValueChanges(null, (prev, curr) -> {
       initAllStacking();
     });
 
-    CONFIG.POTIONS.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.POTIONS.subscribeToValueChanges(null, (prev, curr) -> {
       initPotionStacking();
     });
-    CONFIG.POTION_COUNT.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.POTION_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
       initPotionStacking();
     });
 
-    CONFIG.SPLASH_POTIONS.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.SPLASH_POTIONS.subscribeToValueChanges(null, (prev, curr) -> {
       initSplashPotionStacking();
     });
-    CONFIG.SPLASH_POTION_COUNT.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.SPLASH_POTION_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
       initSplashPotionStacking();
     });
 
-    CONFIG.SOUPS.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.SOUPS.subscribeToValueChanges(null, (prev, curr) -> {
       initSoupStacking();
     });
-    CONFIG.SOUP_COUNT.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.SOUP_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
       initSoupStacking();
     });
 
-    CONFIG.ENCHANTED_BOOKS.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.ENCHANTED_BOOKS.subscribeToValueChanges(null, (prev, curr) -> {
       initEnchantedBookStacking();
     });
-    CONFIG.ENCHANTED_BOOK_COUNT.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.ENCHANTED_BOOK_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
       initEnchantedBookStacking();
     });
 
-    CONFIG.BOATS.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.BOATS.subscribeToValueChanges(null, (prev, curr) -> {
       initBoatStacking();
     });
-    CONFIG.BOAT_COUNT.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.BOAT_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
       initBoatStacking();
     });
 
-    CONFIG.MINECARTS.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.MINECARTS.subscribeToValueChanges(null, (prev, curr) -> {
       initMinecartStacking();
     });
-    CONFIG.MINECART_COUNT.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.MINECART_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
       initMinecartStacking();
     });
 
-    CONFIG.BUCKETS.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.BUCKETS.subscribeToValueChanges(null, (prev, curr) -> {
       initBucketStacking();
     });
-    CONFIG.BUCKET_COUNT.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.BUCKET_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
       initBucketStacking();
     });
 
-    CONFIG.BEDS.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.BEDS.subscribeToValueChanges(null, (prev, curr) -> {
       initBedStacking();
     });
-    CONFIG.BED_COUNT.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.BED_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
       initBedStacking();
     });
 
-    CONFIG.DISCS.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.DISCS.subscribeToValueChanges(null, (prev, curr) -> {
       initDiscStacking();
     });
-    CONFIG.DISC_COUNT.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.DISC_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
       initDiscStacking();
     });
 
-    CONFIG.HORNS.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.HORNS.subscribeToValueChanges(null, (prev, curr) -> {
       initHornStacking();
     });
-    CONFIG.HORN_COUNT.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.HORN_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
       initHornStacking();
     });
 
-    CONFIG.PATTERNS.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.PATTERNS.subscribeToValueChanges(null, (prev, curr) -> {
       initPatternStacking();
     });
-    CONFIG.PATTERN_COUNT.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.PATTERN_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
       initPatternStacking();
     });
 
-    CONFIG.SADDLES.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.SADDLES.subscribeToValueChanges(null, (prev, curr) -> {
       initSaddleStacking();
     });
-    CONFIG.SADDLE_COUNT.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.SADDLE_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
       initSaddleStacking();
     });
 
-    CONFIG.CAKES.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.CAKES.subscribeToValueChanges(null, (prev, curr) -> {
       initCakeStacking();
     });
-    CONFIG.CAKE_COUNT.subscribeToValueChanges((prev, curr) -> {
+    CONFIG.CAKE_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
       initCakeStacking();
     });
   }
