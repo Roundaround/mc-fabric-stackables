@@ -175,6 +175,10 @@ public final class StackablesMod implements ModInitializer {
     ((ItemAccessor) Items.DARK_OAK_CHEST_BOAT).setMaxCount(count);
     ((ItemAccessor) Items.MANGROVE_BOAT).setMaxCount(count);
     ((ItemAccessor) Items.MANGROVE_CHEST_BOAT).setMaxCount(count);
+    ((ItemAccessor) Items.CHERRY_BOAT).setMaxCount(count);
+    ((ItemAccessor) Items.CHERRY_CHEST_BOAT).setMaxCount(count);
+    ((ItemAccessor) Items.BAMBOO_RAFT).setMaxCount(count);
+    ((ItemAccessor) Items.BAMBOO_CHEST_RAFT).setMaxCount(count);
   }
 
   private void initMinecartStacking() {
@@ -236,6 +240,7 @@ public final class StackablesMod implements ModInitializer {
     ((ItemAccessor) Items.MUSIC_DISC_OTHERSIDE).setMaxCount(count);
     ((ItemAccessor) Items.MUSIC_DISC_5).setMaxCount(count);
     ((ItemAccessor) Items.MUSIC_DISC_PIGSTEP).setMaxCount(count);
+    ((ItemAccessor) Items.MUSIC_DISC_RELIC).setMaxCount(count);
   }
 
   private void initHornStacking() {
