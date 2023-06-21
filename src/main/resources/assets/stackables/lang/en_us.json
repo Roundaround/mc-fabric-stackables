@@ -27,5 +27,7 @@
   "stackables.saddles.label": "Saddles",
   "stackables.saddle_count.label": "Saddle stack size",
   "stackables.cakes.label": "Cakes",
-  "stackables.cake_count.label": "Cake stack size"
+  "stackables.cake_count.label": "Cake stack size",
+  "stackables.eggs.label": "Eggs",
+  "stackables.egg_count.label": "Egg stack size"
 }

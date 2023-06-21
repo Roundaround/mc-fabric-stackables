@@ -34,12 +34,13 @@ public class StackablesConfig extends ModConfig {
   public final IntConfigOption SADDLE_COUNT;
   public final BooleanConfigOption CAKES;
   public final IntConfigOption CAKE_COUNT;
+  public final BooleanConfigOption EGGS;
+  public final IntConfigOption EGG_COUNT;
   // public final IntConfigOption ARMOR_STAND_COUNT;
   // public final IntConfigOption BANNER_COUNT; // All colors
   // public final IntConfigOption BOTTLE_COUNT; // Includes honey bottles
   // public final IntConfigOption SIGN_COUNT; // All wood types
   // public final IntConfigOption SNOWBALL_COUNT;
-  // public final IntConfigOption EGG_COUNT;
   // public final IntConfigOption ENDER_PEARL_COUNT;
   // public final IntConfigOption BOOK_AND_QUILL_COUNT;
 
@@ -251,6 +252,21 @@ public class StackablesConfig extends ModConfig {
         IntConfigOption
             .builder(this, "cakeCount", "stackables.cake_count.label")
             .setComment("Maximum stack size for cakes.")
+            .setMinValue(1)
+            .setMaxValue(64)
+            .setDefaultValue(16)
+            .build());
+
+    EGGS = registerConfigOption(
+            BooleanConfigOption
+                    .yesNoBuilder(this, "eggs", "stackables.eggs.label")
+                    .setComment("Whether to allow eggs to stack.")
+                    .build());
+
+    EGG_COUNT = registerConfigOption(
+        IntConfigOption
+            .builder(this, "eggCount", "stackables.egg_count.label")
+            .setComment("Maximum stack size for eggs.")
             .setMinValue(1)
             .setMaxValue(64)
             .setDefaultValue(16)

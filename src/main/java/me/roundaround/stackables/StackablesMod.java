@@ -113,6 +113,13 @@ public final class StackablesMod implements ModInitializer {
     CONFIG.CAKE_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
       initCakeStacking();
     });
+
+    CONFIG.EGGS.subscribeToValueChanges(null, (prev, curr) -> {
+      initEggStacking();
+    });
+    CONFIG.EGG_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
+      initEggStacking();
+    });
   }
 
   private void initAllStacking() {
@@ -129,6 +136,7 @@ public final class StackablesMod implements ModInitializer {
     initPatternStacking();
     initSaddleStacking();
     initCakeStacking();
+    initEggStacking();
   }
 
   private void initPotionStacking() {
@@ -266,5 +274,10 @@ public final class StackablesMod implements ModInitializer {
   private void initCakeStacking() {
     int count = CONFIG.MOD_ENABLED.getValue() && CONFIG.CAKES.getValue() ? CONFIG.CAKE_COUNT.getValue() : 1;
     ((ItemAccessor) Items.CAKE).setMaxCount(count);
+  }
+
+  private void initEggStacking() {
+    int count = CONFIG.MOD_ENABLED.getValue() && CONFIG.EGGS.getValue() ? CONFIG.EGG_COUNT.getValue() : 1;
+    ((ItemAccessor) Items.EGG).setMaxCount(count);
   }
 }
