@@ -13,7 +13,8 @@
     "MilkBucketItemMixin",
     "PowderSnowBucketItemMixin",
     "StewItemMixin",
-    "ThrowablePotionItemMixin"
+    "ThrowablePotionItemMixin",
+    "WaterBottleDispenserBehaviorMixin"
   ],
   "injectors": {
     "defaultRequire": 1
