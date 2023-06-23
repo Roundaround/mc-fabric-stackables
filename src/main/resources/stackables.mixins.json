@@ -4,6 +4,7 @@
   "package": "me.roundaround.stackables.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "AbstractFurnaceBlockEntityMixin",
     "BucketItemMixin",
     "EmptyBucketDispenserBehaviorMixin",
     "FilledBucketDispenserBehaviorMixin",
