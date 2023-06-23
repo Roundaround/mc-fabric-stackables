@@ -27,5 +27,13 @@
   "stackables.saddles.label": "Saddles",
   "stackables.saddle_count.label": "Saddle stack size",
   "stackables.cakes.label": "Cakes",
-  "stackables.cake_count.label": "Cake stack size"
+  "stackables.cake_count.label": "Cake stack size",
+  "stackables.armor_stand_count.label": "Armor stand stack size",
+  "stackables.banner_count.label": "Banner stack size",
+  "stackables.sign_count.label": "Sign stack size",
+  "stackables.snowball_count.label": "Snowball stack size",
+  "stackables.egg_count.label": "Egg stack size",
+  "stackables.ender_pearl_count.label": "Ender pearl stack size",
+  "stackables.honey_bottle_count.label": "Honey bottle stack size",
+  "stackables.signed_book_count.label": "Signed book stack size"
 }
