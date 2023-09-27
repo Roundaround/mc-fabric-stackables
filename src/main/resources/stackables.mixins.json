@@ -4,6 +4,7 @@
   "package": "me.roundaround.stackables.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "AnvilScreenHandlerMixin",
     "BucketItemMixin",
     "HorseScreenHandlerSlotMixin",
     "ItemAccessor",
@@ -11,6 +12,7 @@
     "MilkBucketItemMixin",
     "PowderSnowBucketItemMixin",
     "StewItemMixin",
+    "SuspiciousStewItemMixin",
     "ThrowablePotionItemMixin"
   ],
   "injectors": {
