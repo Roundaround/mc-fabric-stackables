@@ -27,7 +27,7 @@ public abstract class FilledBucketDispenserBehaviorMixin {
       return;
     }
 
-    DispenserBlockEntity dispenser = pointer.getBlockEntity();
+    DispenserBlockEntity dispenser = pointer.blockEntity();
 
     if (dispenser.addToFirstFreeSlot(new ItemStack(Items.BUCKET)) >= 0) {
       info.setReturnValue(stack);

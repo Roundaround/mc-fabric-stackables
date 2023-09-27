@@ -25,7 +25,7 @@ public class WaterBottleDispenserBehaviorMixin {
       return;
     }
 
-    DispenserBlockEntity dispenser = pointer.getBlockEntity();
+    DispenserBlockEntity dispenser = pointer.blockEntity();
 
     if (dispenser.addToFirstFreeSlot(new ItemStack(Items.GLASS_BOTTLE)) >= 0) {
       info.setReturnValue(stack);

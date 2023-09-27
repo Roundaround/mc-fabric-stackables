@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.*;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -35,11 +36,12 @@ public abstract class AbstractFurnaceBlockEntityMixin {
     ItemDispenserBehavior.spawnItem(world, new ItemStack(byproduct), 6, direction, position);
   }
 
+  @Unique
   private static Position getOutputLocation(BlockPos pos, BlockState state) {
     Direction direction = state.get(AbstractFurnaceBlock.FACING);
     double x = pos.getX() + 0.7 * direction.getOffsetX();
     double y = pos.getY() + 0.7 * direction.getOffsetY();
     double z = pos.getZ() + 0.7 * direction.getOffsetZ();
-    return new PositionImpl(x, y, z);
+    return new Vec3d(x, y, z);
   }
 }

@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPointer;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
@@ -12,6 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(targets = "net/minecraft/block/dispenser/DispenserBehavior$9")
 public abstract class EmptyBucketDispenserBehaviorMixin {
+  @Unique
   private Item filledBucketItem = null;
 
   @ModifyVariable(method = "dispenseSilently", at = @At("STORE"), ordinal = 0)
@@ -42,7 +44,7 @@ public abstract class EmptyBucketDispenserBehaviorMixin {
       return;
     }
 
-    DispenserBlockEntity dispenser = pointer.getBlockEntity();
+    DispenserBlockEntity dispenser = pointer.blockEntity();
 
     if (dispenser.addToFirstFreeSlot(new ItemStack(filledItem)) >= 0) {
       info.setReturnValue(stack);
