@@ -113,6 +113,38 @@ public final class StackablesMod implements ModInitializer {
     CONFIG.CAKE_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
       initCakeStacking();
     });
+
+    CONFIG.ARMOR_STAND_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
+      initArmorStandStacking();
+    });
+
+    CONFIG.BANNER_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
+      initBannerStacking();
+    });
+
+    CONFIG.SIGN_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
+      initSignStacking();
+    });
+
+    CONFIG.SNOWBALL_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
+      initSnowballStacking();
+    });
+
+    CONFIG.EGG_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
+      initEggStacking();
+    });
+
+    CONFIG.ENDER_PEARL_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
+      initEnderPearlStacking();
+    });
+
+    CONFIG.HONEY_BOTTLE_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
+      initHoneyBottleStacking();
+    });
+
+    CONFIG.SIGNED_BOOK_COUNT.subscribeToValueChanges(null, (prev, curr) -> {
+      initSignedBookStacking();
+    });
   }
 
   private void initAllStacking() {
@@ -129,6 +161,14 @@ public final class StackablesMod implements ModInitializer {
     initPatternStacking();
     initSaddleStacking();
     initCakeStacking();
+    initArmorStandStacking();
+    initBannerStacking();
+    initSignStacking();
+    initSnowballStacking();
+    initEggStacking();
+    initEnderPearlStacking();
+    initHoneyBottleStacking();
+    initSignedBookStacking();
   }
 
   private void initPotionStacking() {
@@ -266,5 +306,81 @@ public final class StackablesMod implements ModInitializer {
   private void initCakeStacking() {
     int count = CONFIG.MOD_ENABLED.getValue() && CONFIG.CAKES.getValue() ? CONFIG.CAKE_COUNT.getValue() : 1;
     ((ItemAccessor) Items.CAKE).setMaxCount(count);
+  }
+
+  private void initArmorStandStacking() {
+    int count = CONFIG.MOD_ENABLED.getValue() ? CONFIG.ARMOR_STAND_COUNT.getValue() : 16;
+    ((ItemAccessor) Items.ARMOR_STAND).setMaxCount(count);
+  }
+
+  private void initBannerStacking() {
+    int count = CONFIG.MOD_ENABLED.getValue() ? CONFIG.BANNER_COUNT.getValue() : 16;
+    ((ItemAccessor) Items.WHITE_BANNER).setMaxCount(count);
+    ((ItemAccessor) Items.ORANGE_BANNER).setMaxCount(count);
+    ((ItemAccessor) Items.MAGENTA_BANNER).setMaxCount(count);
+    ((ItemAccessor) Items.LIGHT_BLUE_BANNER).setMaxCount(count);
+    ((ItemAccessor) Items.YELLOW_BANNER).setMaxCount(count);
+    ((ItemAccessor) Items.LIME_BANNER).setMaxCount(count);
+    ((ItemAccessor) Items.PINK_BANNER).setMaxCount(count);
+    ((ItemAccessor) Items.GRAY_BANNER).setMaxCount(count);
+    ((ItemAccessor) Items.LIGHT_GRAY_BANNER).setMaxCount(count);
+    ((ItemAccessor) Items.CYAN_BANNER).setMaxCount(count);
+    ((ItemAccessor) Items.PURPLE_BANNER).setMaxCount(count);
+    ((ItemAccessor) Items.BLUE_BANNER).setMaxCount(count);
+    ((ItemAccessor) Items.BROWN_BANNER).setMaxCount(count);
+    ((ItemAccessor) Items.GREEN_BANNER).setMaxCount(count);
+    ((ItemAccessor) Items.RED_BANNER).setMaxCount(count);
+    ((ItemAccessor) Items.BLACK_BANNER).setMaxCount(count);
+  }
+
+  private void initSignStacking() {
+    int count = CONFIG.MOD_ENABLED.getValue() ? CONFIG.SIGN_COUNT.getValue() : 16;
+    ((ItemAccessor) Items.OAK_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.SPRUCE_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.BIRCH_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.JUNGLE_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.ACACIA_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.CHERRY_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.DARK_OAK_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.MANGROVE_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.BAMBOO_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.CRIMSON_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.WARPED_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.OAK_HANGING_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.SPRUCE_HANGING_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.BIRCH_HANGING_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.JUNGLE_HANGING_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.ACACIA_HANGING_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.CHERRY_HANGING_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.DARK_OAK_HANGING_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.MANGROVE_HANGING_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.BAMBOO_HANGING_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.CRIMSON_HANGING_SIGN).setMaxCount(count);
+    ((ItemAccessor) Items.WARPED_HANGING_SIGN).setMaxCount(count);
+  }
+
+  private void initSnowballStacking() {
+    int count = CONFIG.MOD_ENABLED.getValue() ? CONFIG.SNOWBALL_COUNT.getValue() : 16;
+    ((ItemAccessor) Items.SNOWBALL).setMaxCount(count);
+  }
+
+  private void initEggStacking() {
+    int count = CONFIG.MOD_ENABLED.getValue() ? CONFIG.EGG_COUNT.getValue() : 16;
+    ((ItemAccessor) Items.EGG).setMaxCount(count);
+  }
+
+  private void initEnderPearlStacking() {
+    int count = CONFIG.MOD_ENABLED.getValue() ? CONFIG.ENDER_PEARL_COUNT.getValue() : 16;
+    ((ItemAccessor) Items.ENDER_PEARL).setMaxCount(count);
+  }
+
+  private void initHoneyBottleStacking() {
+    int count = CONFIG.MOD_ENABLED.getValue() ? CONFIG.HONEY_BOTTLE_COUNT.getValue() : 16;
+    ((ItemAccessor) Items.HONEY_BOTTLE).setMaxCount(count);
+  }
+
+  private void initSignedBookStacking() {
+    int count = CONFIG.MOD_ENABLED.getValue() ? CONFIG.SIGNED_BOOK_COUNT.getValue() : 16;
+    ((ItemAccessor) Items.WRITTEN_BOOK).setMaxCount(count);
   }
 }

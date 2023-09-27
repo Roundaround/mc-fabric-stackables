@@ -34,14 +34,15 @@ public class StackablesConfig extends ModConfig {
   public final IntConfigOption SADDLE_COUNT;
   public final BooleanConfigOption CAKES;
   public final IntConfigOption CAKE_COUNT;
-  // public final IntConfigOption ARMOR_STAND_COUNT;
-  // public final IntConfigOption BANNER_COUNT; // All colors
-  // public final IntConfigOption BOTTLE_COUNT; // Includes honey bottles
-  // public final IntConfigOption SIGN_COUNT; // All wood types
-  // public final IntConfigOption SNOWBALL_COUNT;
-  // public final IntConfigOption EGG_COUNT;
-  // public final IntConfigOption ENDER_PEARL_COUNT;
-  // public final IntConfigOption BOOK_AND_QUILL_COUNT;
+
+  public final IntConfigOption ARMOR_STAND_COUNT;
+  public final IntConfigOption BANNER_COUNT; // All colors
+  public final IntConfigOption SIGN_COUNT; // All wood types
+  public final IntConfigOption SNOWBALL_COUNT;
+  public final IntConfigOption EGG_COUNT;
+  public final IntConfigOption ENDER_PEARL_COUNT;
+  public final IntConfigOption HONEY_BOTTLE_COUNT;
+  public final IntConfigOption SIGNED_BOOK_COUNT;
 
   public StackablesConfig() {
     super(StackablesMod.MOD_ID);
@@ -251,6 +252,78 @@ public class StackablesConfig extends ModConfig {
         IntConfigOption
             .builder(this, "cakeCount", "stackables.cake_count.label")
             .setComment("Maximum stack size for cakes.")
+            .setMinValue(1)
+            .setMaxValue(64)
+            .setDefaultValue(16)
+            .build());
+
+    ARMOR_STAND_COUNT = registerConfigOption(
+        IntConfigOption
+            .builder(this, "armorStandCount", "stackables.armor_stand_count.label")
+            .setComment("Maximum stack size for armor stands.")
+            .setMinValue(1)
+            .setMaxValue(64)
+            .setDefaultValue(16)
+            .build());
+
+    BANNER_COUNT = registerConfigOption(
+        IntConfigOption
+            .builder(this, "bannerCount", "stackables.banner_count.label")
+            .setComment("Maximum stack size for banners.")
+            .setMinValue(1)
+            .setMaxValue(64)
+            .setDefaultValue(16)
+            .build());
+
+    SIGN_COUNT = registerConfigOption(
+        IntConfigOption
+            .builder(this, "signCount", "stackables.sign_count.label")
+            .setComment("Maximum stack size for signs.")
+            .setMinValue(1)
+            .setMaxValue(64)
+            .setDefaultValue(16)
+            .build());
+
+    SNOWBALL_COUNT = registerConfigOption(
+        IntConfigOption
+            .builder(this, "snowballCount", "stackables.snowball_count.label")
+            .setComment("Maximum stack size for snowballs.")
+            .setMinValue(1)
+            .setMaxValue(64)
+            .setDefaultValue(16)
+            .build());
+
+    EGG_COUNT = registerConfigOption(
+        IntConfigOption
+            .builder(this, "eggCount", "stackables.egg_count.label")
+            .setComment("Maximum stack size for eggs.")
+            .setMinValue(1)
+            .setMaxValue(64)
+            .setDefaultValue(16)
+            .build());
+
+    ENDER_PEARL_COUNT = registerConfigOption(
+        IntConfigOption
+            .builder(this, "enderPearlCount", "stackables.ender_pearl_count.label")
+            .setComment("Maximum stack size for ender pearls.")
+            .setMinValue(1)
+            .setMaxValue(64)
+            .setDefaultValue(16)
+            .build());
+
+    HONEY_BOTTLE_COUNT = registerConfigOption(
+        IntConfigOption
+            .builder(this, "honeyBottleCount", "stackables.honey_bottle_count.label")
+            .setComment("Maximum stack size for honey bottles.")
+            .setMinValue(1)
+            .setMaxValue(64)
+            .setDefaultValue(16)
+            .build());
+
+    SIGNED_BOOK_COUNT = registerConfigOption(
+        IntConfigOption
+            .builder(this, "signedBookCount", "stackables.signed_book_count.label")
+            .setComment("Maximum stack size for signed books.")
             .setMinValue(1)
             .setMaxValue(64)
             .setDefaultValue(16)
