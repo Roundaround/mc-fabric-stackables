@@ -31,6 +31,7 @@ public abstract class FilledBucketDispenserBehaviorMixin {
 
     if (dispenser.addToFirstFreeSlot(new ItemStack(Items.BUCKET)) >= 0) {
       info.setReturnValue(stack);
+      return;
     }
 
     for (int i = 0; i < dispenser.size(); i++) {
