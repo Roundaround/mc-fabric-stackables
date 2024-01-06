@@ -128,5 +128,9 @@ public class StackablesTagGenerator extends FabricTagProvider.ItemTagProvider {
     getOrCreateTagBuilder(StackablesTags.SIGNED_BOOKS)
         .add(Items.WRITTEN_BOOK)
         .setReplace(true);
+
+    getOrCreateTagBuilder(StackablesTags.DECORATED_POTS)
+        .add(Items.DECORATED_POT)
+        .setReplace(true);
   }
 }

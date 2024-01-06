@@ -29,6 +29,7 @@ public abstract class StackablesTags {
   public static final TagKey<Item> ENDER_PEARLS = register("ender_pearls");
   public static final TagKey<Item> DRINKABLES = register("drinkables");
   public static final TagKey<Item> SIGNED_BOOKS = register("signed_books");
+  public static final TagKey<Item> DECORATED_POTS = register("decorated_pots");
 
   private static TagKey<Item> register(String id) {
     return TagKey.of(RegistryKeys.ITEM, new Identifier(StackablesMod.MOD_ID, id));

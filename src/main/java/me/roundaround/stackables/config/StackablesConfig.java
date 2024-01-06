@@ -39,6 +39,8 @@ public class StackablesConfig extends ModConfig {
   public final IntConfigOption CAKE_COUNT;
   public final BooleanConfigOption TOTEMS;
   public final IntConfigOption TOTEM_COUNT;
+  public final BooleanConfigOption DECORATED_POTS;
+  public final IntConfigOption DECORATED_POT_COUNT;
 
   public final IntConfigOption EMPTY_BUCKET_COUNT;
   public final IntConfigOption ARMOR_STAND_COUNT;
@@ -257,6 +259,19 @@ public class StackablesConfig extends ModConfig {
         .setMinValue(1)
         .setMaxValue(64)
         .setDefaultValue(16)
+        .build());
+
+    DECORATED_POTS = registerConfigOption(BooleanConfigOption.yesNoBuilder(this,
+        "decoratedPots",
+        "stackables.decorated_pots.label").setComment("Whether to allow decorated pots to stack.").build());
+
+    DECORATED_POT_COUNT = registerConfigOption(IntConfigOption.builder(this,
+            "decoratedPotCount",
+            "stackables.decorated_pot_count.label")
+        .setComment("Maximum stack size for decorated pots.")
+        .setMinValue(1)
+        .setMaxValue(64)
+        .setDefaultValue(64)
         .build());
 
     EMPTY_BUCKET_COUNT = registerConfigOption(IntConfigOption.builder(this,
