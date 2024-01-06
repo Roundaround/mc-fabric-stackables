@@ -58,6 +58,9 @@ public final class StackablesMod implements ModInitializer {
         StackablesTags.HORSE_EQUIPMENT);
     syncTagMaxStackSizeWithConfig(CONFIG.CAKES, CONFIG.CAKE_COUNT, StackablesTags.CAKES);
     syncTagMaxStackSizeWithConfig(CONFIG.TOTEMS, CONFIG.TOTEM_COUNT, StackablesTags.TOTEMS);
+    syncTagMaxStackSizeWithConfig(CONFIG.DECORATED_POTS,
+        CONFIG.DECORATED_POT_COUNT,
+        StackablesTags.DECORATED_POTS);
 
     syncTagMaxStackSizeWithConfig(CONFIG.EMPTY_BUCKET_COUNT, StackablesTags.EMPTY_BUCKETS);
     syncTagMaxStackSizeWithConfig(CONFIG.ARMOR_STAND_COUNT, StackablesTags.ARMOR_STANDS);

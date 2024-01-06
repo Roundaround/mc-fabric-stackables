@@ -34,6 +34,8 @@
   "stackables.cake_count.label": "Cake stack size",
   "stackables.totems.label": "Totems",
   "stackables.totem_count.label": "Totem stack size",
+  "stackables.decorated_pots.label": "Decorated pots",
+  "stackables.decorated_pot_count.label": "Decorated pot stack size",
   "stackables.empty_bucket_count.label": "Empty bucket stack size",
   "stackables.armor_stand_count.label": "Armor stand stack size",
   "stackables.banner_count.label": "Banner stack size",
