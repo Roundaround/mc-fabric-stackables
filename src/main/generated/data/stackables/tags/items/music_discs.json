@@ -1,0 +1,9 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "#minecraft:music_discs",
+      "required": false
+    }
+  ]
+}

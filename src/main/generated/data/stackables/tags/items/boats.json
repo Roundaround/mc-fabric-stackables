@@ -1,0 +1,13 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "#minecraft:boats",
+      "required": false
+    },
+    {
+      "id": "#minecraft:chest_boats",
+      "required": false
+    }
+  ]
+}

@@ -16,6 +16,9 @@
   "icon": "assets/stackables/icon.png",
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      "me.roundaround.stackables.data.StackablesDataGenerator"
+    ],
     "main": [
       "me.roundaround.stackables.StackablesMod"
     ],
@@ -29,6 +32,7 @@
   "accessWidener": "stackables.accesswidener",
   "depends": {
     "fabricloader": ">=0.13.3",
+    "fabric-api-base": "*",
     "minecraft": "1.20.*",
     "java": ">=17"
   }

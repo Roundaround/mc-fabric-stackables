@@ -37,3 +37,6 @@ run/
 
 # Ignore Gradle build output directory
 build
+
+# Ignore datagen task cache directory
+src/main/generated/.cache
