@@ -1,0 +1,10 @@
+{
+  "replace": true,
+  "values": [
+    "minecraft:honey_bottle",
+    {
+      "id": "#c:milk_buckets",
+      "required": false
+    }
+  ]
+}

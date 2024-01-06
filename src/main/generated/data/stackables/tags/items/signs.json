@@ -1,0 +1,13 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "#minecraft:signs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:hanging_signs",
+      "required": false
+    }
+  ]
+}
