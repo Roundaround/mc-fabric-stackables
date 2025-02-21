@@ -2,7 +2,7 @@
   "replace": true,
   "values": [
     {
-      "id": "#c:empty_buckets",
+      "id": "#c:buckets/empty",
       "required": false
     }
   ]

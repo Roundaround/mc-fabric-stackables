@@ -3,11 +3,11 @@
   "values": [
     "minecraft:powder_snow_bucket",
     {
-      "id": "#c:water_buckets",
+      "id": "#c:buckets/water",
       "required": false
     },
     {
-      "id": "#c:lava_buckets",
+      "id": "#c:buckets/lava",
       "required": false
     }
   ]

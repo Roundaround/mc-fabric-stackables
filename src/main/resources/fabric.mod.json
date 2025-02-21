@@ -29,11 +29,16 @@
   "mixins": [
     "stackables.mixins.json"
   ],
-  "accessWidener": "stackables.accesswidener",
+  "custom": {
+    "loom:injected_interfaces": {
+      "net/minecraft/class_1792": [
+        "me/roundaround/stackables/util/ItemExtensions"
+      ]
+    }
+  },
   "depends": {
-    "fabricloader": ">=0.13.3",
+    "fabricloader": "*",
     "fabric-api-base": "*",
-    "minecraft": "1.20.*",
-    "java": ">=17"
+    "minecraft": "1.20.*"
   }
 }

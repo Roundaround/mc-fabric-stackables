@@ -3,7 +3,7 @@
   "values": [
     "minecraft:honey_bottle",
     {
-      "id": "#c:milk_buckets",
+      "id": "#c:buckets/milk",
       "required": false
     }
   ]
