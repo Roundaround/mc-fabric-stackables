@@ -24,11 +24,11 @@ public abstract class ThrowablePotionItemMixin extends PotionItem {
       World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> info
   ) {
     StackablesConfig config = StackablesConfig.getInstance();
-    if (!config.modEnabled.getPendingValue() || !config.splashPotions.getPendingValue() ||
-        config.splashPotionCount.getPendingValue() == 1 || config.splashPotionDelay.getPendingValue() == 0) {
+    if (!config.modEnabled.getValue() || !config.splashPotions.getValue() || config.splashPotionCount.getValue() == 1 ||
+        config.splashPotionDelay.getValue() == 0) {
       return;
     }
 
-    user.getItemCooldownManager().set((ThrowablePotionItem) (Object) this, config.splashPotionDelay.getPendingValue());
+    user.getItemCooldownManager().set((ThrowablePotionItem) (Object) this, config.splashPotionDelay.getValue());
   }
 }

@@ -57,7 +57,9 @@ public class StackablesTagGenerator extends FabricTagProvider.ItemTagProvider {
 
     this.getOrCreateTagBuilder(StackablesTags.BEDS).addOptionalTag(ItemTags.BEDS).setReplace(true);
 
-    this.getOrCreateTagBuilder(StackablesTags.MUSIC_DISCS).addOptionalTag(ItemTags.MUSIC_DISCS).setReplace(true);
+    this.getOrCreateTagBuilder(StackablesTags.MUSIC_DISCS)
+        .addOptionalTag(ConventionalItemTags.MUSIC_DISCS)
+        .setReplace(true);
 
     this.getOrCreateTagBuilder(StackablesTags.INSTRUMENTS).add(Items.GOAT_HORN).setReplace(true);
 

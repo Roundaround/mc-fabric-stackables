@@ -9,15 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public final class MaxStackApplier {
-  private final HashMap<Identifier, Integer> vanillaMaxStacks = new HashMap<>();
   private final ArrayList<Callback> callbacks = new ArrayList<>();
   private final ArrayList<Observable.Subscription> subscriptions = new ArrayList<>();
+  private final ArrayList<Item> dirtyItems = new ArrayList<>();
 
   private static MaxStackApplier instance;
 
@@ -33,7 +31,7 @@ public final class MaxStackApplier {
   }
 
   public void init() {
-    if (!this.callbacks.isEmpty() || !this.subscriptions.isEmpty()) {
+    if (!this.callbacks.isEmpty() || !this.subscriptions.isEmpty() || !this.dirtyItems.isEmpty()) {
       this.clear();
     }
 
@@ -95,11 +93,17 @@ public final class MaxStackApplier {
   }
 
   public void clear() {
+    this.callbacks.clear();
+
     for (Observable.Subscription subscription : this.subscriptions) {
       subscription.unsubscribe();
     }
     this.subscriptions.clear();
-    this.callbacks.clear();
+
+    for (Item item : this.dirtyItems) {
+      item.stackables$resetMaxCount();
+    }
+    this.dirtyItems.clear();
   }
 
   private void syncTagMaxStackSizeWithConfig(
@@ -126,18 +130,10 @@ public final class MaxStackApplier {
   }
 
   private void setMaxCountForTag(TagKey<Item> tag, int count) {
-    Registries.ITEM.getOrCreateEntryList(tag).stream().forEach((entry) -> {
-      // Never set the max count to less than the vanilla max count.
-      entry.value().stackables$setMaxCount(Math.max(count, this.getVanillaMaxStack(entry)));
-    });
-  }
-
-  private int getVanillaMaxStack(RegistryEntry<Item> entry) {
-    return entry.getKey()
-        .map((itemRegistryKey) -> this.vanillaMaxStacks.computeIfAbsent(itemRegistryKey.getValue(),
-            (id) -> entry.value().getMaxCount()
-        ))
-        .orElse(-1);
+    Registries.ITEM.getOrCreateEntryList(tag)
+        .stream()
+        .map(RegistryEntry::value)
+        .forEach((item) -> item.stackables$setMaxCount(count));
   }
 
   @FunctionalInterface

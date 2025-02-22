@@ -31,6 +31,6 @@ public abstract class StackablesTags {
   public static final TagKey<Item> SIGNED_BOOKS = register("signed_books");
 
   private static TagKey<Item> register(String id) {
-    return TagKey.of(RegistryKeys.ITEM, new Identifier(StackablesMod.MOD_ID, id));
+    return TagKey.of(RegistryKeys.ITEM, Identifier.of(StackablesMod.MOD_ID, id));
   }
 }
